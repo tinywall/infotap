@@ -1,0 +1,39 @@
+<ion-side-menus enable-menu-with-back-views="true" cache-view="false">
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar align-title="center" class="bar-positive bg-dpt-blue nav-title-slide-ios7" no-tap-scroll="true">
+      	<ion-nav-buttons side="left">
+            <button ng-hide="((location.path())|limitTo:6)!='/feed/'" class="button button-icon button-clear ion-android-arrow-back" ng-click="myGoBack()">
+            </button>
+                <button ng-show="Globals.isLoggedIn && ((location.path())|limitTo:6)!='/feed/'" ng-click="toggleSlideMenu()" class="button button-icon button-clear ion-navicon">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="mainContent" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" width="230">
+    <ion-content class="left-menu-content">
+            <div class='left-menu-header'>
+            <ul class="list left-slide-menu">
+                <a menu-toggle="left" ng-click="Globals.goToState('base.home')" nav-clear class="item">
+                    <i class="fa fa-home"></i> Home
+                </a>
+                <a menu-toggle="left" ng-click="Globals.goToState('base.feeds')" nav-clear class="item">
+                    <i class="fa fa-newspaper-o"></i> Feeds
+                </a>
+                <a ng-show="Globals.isLoggedIn" menu-toggle="left" ng-click="Globals.goToState('base.categories')" nav-clear class="item">
+                    <i class="fa fa-sign-out"></i> Categories
+                </a>
+                <a ng-show="Globals.isLoggedIn" menu-toggle="left" ng-click="Globals.goToState('base.departments')" nav-clear class="item">
+                    <i class="fa fa-gear"></i> Settings
+                </a>
+                <a menu-toggle="left" ng-click="Globals.goToState('base.about')" nav-clear class="item">
+                    <i class="fa fa-gear"></i> About
+                </a>
+                <a ng-show="Globals.isLoggedIn" menu-toggle="left" ng-click="Globals.logout()" nav-clear class="item">
+                    <i class="fa fa-sign-out"></i> Logout
+                </a>
+                </ul>
+                </div>
+       </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

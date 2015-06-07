@@ -1,0 +1,19 @@
+<ion-view view-title="InfoTap">
+  <ion-content class="nopadding feed-detail">
+    <div class="padding feed-detail-title row">
+      
+      <div class="col col-75 feed-detail-title-text">
+        <div class="feed-detail-title-name">{{feed.title}}</div>
+        <span class="feed-detail-title-department">{{feed.department.name}}</span>
+      </div>
+      <img class="feed-department-img" ng-src="{{feed.department.img}}" style="width: 64px; height: 64px" alt="{{feed.department}}">
+    </div>
+    <div class="padding feed-detail-content">
+    <p>{{feed.message}}</p>
+    
+    </div>
+
+     
+
+  </ion-content>
+</ion-view>

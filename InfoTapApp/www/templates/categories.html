@@ -1,0 +1,43 @@
+<ion-view view-title="InfoTap">
+  <ion-content class="ion-content">
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light ">
+	    <div class="tabs auth-page-tabs bg-dpt-blue">
+		    <a class="tab-item" href="#/feeds/{{''|currentdate}}">
+		      <i class="it-tab-menu fa fa-newspaper-o"> Feeds</i>
+		    </a>
+		    <a class="tab-item active" href="#/categories">
+		      <i class="it-tab-menu fa fa-list-ul"> Categories</i>
+		    </a>
+		    <a class="tab-item" href="#/departments">
+		      <i class="it-tab-menu fa fa-gear"> Preferences</i>
+		    </a>
+		  </div>
+ 	</div>
+    <div class="list page-content">
+     <div class='is-loading' ng-show="isLoading">
+    <i class='fa fa-spinner fa-pulse'></i> Loading...
+    <!-- <div class="it-loading-container">
+      <div class="animation-content">
+      <div class="loading-2"></div>
+      <div class="loading-1"></div>
+      </div>
+      <div class="loading-o"></div>
+      <div class="loading-i"></div>
+    </div>
+    Loading... -->
+  </div>
+  <div ng-hide="isLoading">
+
+    <div class='categories-parent'>
+	  <div ng-repeat="category in categories" class="category-department">
+	  <div ng-click="gotoCategories({{category.id}})">
+	    <img class="category-department-img" src="{{category.img}}"> <div class='categories-name'>{{category.name}}</div>
+	  </div>
+	  </div>
+	  <div class='clearfix'></div><br><br>
+	</div>
+	</div>
+	</div>
+
+  </ion-content>
+</ion-view>

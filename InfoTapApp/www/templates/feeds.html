@@ -1,0 +1,41 @@
+<sion-view title="InfoTap">
+<ion-content class="ion-content"> 
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+  <div class="tabs auth-page-tabs bg-dpt-blue">
+    <a class="tab-item active" href="#/feeds/{{''|currentdate}}">
+      <i class="it-tab-menu fa fa-newspaper-o"> Feeds</i>
+    </a>
+    <a class="tab-item" href="#/categories">
+      <i class="it-tab-menu fa fa-list-ul"> Categories</i>
+    </a>
+    <a class="tab-item" href="#/departments">
+      <i class="it-tab-menu fa fa-gear"> Preferences</i>
+    </a>
+  </div>
+</div>
+<div class='page-content'>
+  <div class='nois-loading' ng-show="isLoading">
+    <!-- <i class='fa fa-spinner fa-pulse'></i> Loading... -->
+    <div class="it-loading-container">
+      <div class="animation-content">
+      <div class="loading-2"></div>
+      <div class="loading-1"></div>
+      </div>
+      <div class="loading-o"></div>
+      <div class="loading-i"></div>
+      <div class='loading-bottom-text'>Loading...</div>
+    </div>
+  </div>
+  <div ng-hide="isLoading">
+    <div ng-show="feeds.length==0" class='message-empty'>No notification for the given criteria</div>
+    <ion-item class="tem-remove-animate item-avatar item-icon-right feed-item " ng-repeat="feed in feeds" type="item-text-wrap" href="#/feed/{{feed.id}}" >
+    <img class="feed-department-img" ng-src="{{feed.department.img}}" alt="{{feed.department.name}}">
+    <h2 class='feeds-title'>{{feed.title}}</h2>
+    <p class='feeds-message'>{{feed.message}}</p>
+    <div class='feed-info'><span class='feed-department-label'>{{feed.department.name}}</span><span class="feed-time">{{feed.creation_time}}</span></div>
+  </ion-item>
+  <div class="feeds-load-more" ng-show="isLoadMore" ng-click="add()">{{loadMoreText}}</div>
+  </div>
+</div>
+</ion-content>
+</ion-view>

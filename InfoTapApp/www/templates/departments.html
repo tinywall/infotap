@@ -1,0 +1,49 @@
+<ion-view view-title="InfoTap">
+  <ion-content class="ion-content">
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light ">
+    <div class="tabs auth-page-tabs bg-dpt-blue">
+    <a class="tab-item" href="#/feeds/{{''|currentdate}}">
+      <i class="it-tab-menu fa fa-newspaper-o"> Feeds</i>
+    </a>
+    <a class="tab-item" href="#/categories">
+      <i class="it-tab-menu fa fa-list-ul"> Categories</i>
+    </a>
+    <a class="tab-item active" href="#/departments">
+      <i class="it-tab-menu fa fa-gear"> Preferences</i>
+    </a>
+  </div>
+  </div>
+<div class='page-content'>
+    <div class='is-loading' ng-show="isLoading">
+    <i class='fa fa-spinner fa-pulse'></i> Loading...
+    <!-- <div class="it-loading-container">
+      <div class="animation-content">
+      <div class="loading-2"></div>
+      <div class="loading-1"></div>
+      </div>
+      <div class="loading-o"></div>
+      <div class="loading-i"></div>
+    </div>
+    Loading... -->
+  </div>
+	<div ng-hide="isLoading">
+	  <form name="settingForm" ng-submit="updateSettings(departments)">	
+	  <ul class="list">
+      <li ng-repeat="department in departments" class="item item-toggle setting-department">
+	     <img class="setting-department-img" src="{{department.img}}"> {{department.name}}
+	      <label class="toggle toggle-balanced">
+	       <input type="checkbox" ng-checked="department.enabled" ng-model="department.enabled">
+	       <div class="track">
+	         <div class="handle"></div> 
+	       </div>
+	     </label> 
+	  </li>
+	  </ul>
+	  <div class='padding'>
+	  	<button class='button button-block button-balanced bg-dpt-green' ng-disabled="isSaveButtonDisabled">Save</button>
+	  </div>
+	  </form>
+	 </div>
+	 </div>
+  </ion-content>
+</ion-view>

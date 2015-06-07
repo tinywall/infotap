@@ -1,0 +1,23 @@
+<ion-view view-title="Account Verification" cache-view="false">
+  <ion-content class="container grey-bg">
+  	<div class="padding bg-dpt-blue">
+      <div class="register-page-title">Please verify your account.</div>
+    </div>
+  	<div class='padding'>
+  	  <form name="mobileVerificationForm" ng-submit="registerSubmit(formdata)" novalidate>
+        <div class='register-input-label'>Verification code in SMS</div>
+	      <label class="item item-input item-floating-label register-input-field white-bg">
+	        <!-- <span class="input-label item-floating-label-text">Full Name</span> -->
+	        <input type="text" placeholder="Verification Code" ng-model="formdata.code">
+	      </label>
+        <div class="nolist">
+          <button class="button button-block button-balanced bg-dpt-green" ng-disabled="isSaveButtonDisabled">Proceed</button>
+        </div>
+        <div class='register-otp-hint'>Please wait.. We are sending an OTP to your registered mobile</div>
+      </form>
+  	</div>
+  </ion-content>
+  <!-- <div class="bar bar-footer bar-balanced">
+  	<div class="title">Next</div>
+  </div> -->
+</ion-view>

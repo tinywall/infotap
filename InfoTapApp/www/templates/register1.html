@@ -1,0 +1,85 @@
+<ion-view view-title="Account Registration" cache-view="false">
+  <ion-content class="container grey-bg">
+  	<div class="padding bg-dpt-blue">
+      <div class="register-page-title">Please give your aadhaar details</div>
+    </div>
+  	<div class='padding'>
+  	<form name="registerObject" ng-submit="register(registerObject)" novalidate>
+  	<div>
+  	  <div class='register-input-label'>Aadhaar No.</div>
+      <label class="item item-input item-floating-label register-input-field white-bg">
+        <!-- <span class="input-label item-floating-label-text">Full Name</span> -->
+        <input type="text" placeholder="Aadhaar No." ng-model="registerObject.uid">
+      </label>
+      <div class='register-input-label'>Full Name</div>
+      <label class="item item-input item-floating-label register-input-field white-bg">
+        <!-- <span class="input-label item-floating-label-text">Mobile No.</span> -->
+        <input type="text" placeholder="Full Name" ng-model="registerObject.name">
+      </label>
+      <div class='register-input-label'>Email ID</div>
+      <label class="item item-input item-floating-label register-input-field white-bg">
+        <!-- <span class="input-label item-floating-label-text">Email ID</span> -->
+        <input type="text" placeholder="Email ID" ng-model="registerObject.email">
+      </label>
+      <div class='register-input-label'>Mobile No.</div>
+      <label class="item item-input item-floating-label register-input-field white-bg">
+        <!-- <span class="input-label item-floating-label-text">Mobile No.</span> -->
+        <input type="text" placeholder="Mobile No." ng-model="registerObject.mobile">
+      </label>
+      <div class='register-input-label'>Date of birth</div>
+      	<div class="register-dbo-style">
+	      <div class="row no-h-margin no-h-padding">
+	        <div class="col">
+	            <label class="item item-input item-select">
+	                <div class="input-label reg-step-input-label">&nbsp;</div>
+	                <select class="select-dbo-option" ng-model="registerObject.day" ng-options="opt as opt.label for opt in day">
+	                </select>
+	            </label>  
+	        </div>
+	        <div class="col">
+	          <label class="item item-input item-select">
+	              <div class="input-label reg-step-input-label">&nbsp;</div>
+	              <select class="select-dbo-option" ng-model="registerObject.month" ng-options="opt as opt.label for opt in month">
+	              </select>
+	          </label>
+	        </div>
+	        <div class="col">
+	          <label class="item item-input item-select">
+	              <div class="input-label reg-step-input-label">&nbsp;</div>
+	              <select class="select-dbo-option" ng-model="registerObject.year" ng-options="opt as opt.label for opt in year">
+	              </select>
+	          </label>
+	        </div>
+	      </div>  
+	    </div>
+	    <div class='register-input-label'>Gender</div>
+      <div class="list">
+        <label class="item item-input item-select">
+            <div class="input-label reg-step-input-label">Select Gender</div>
+            <select ng-model="registerObject.gender" ng-options="opt as opt.label for opt in genderOptions">
+            </select>
+        </label>
+    </div>
+      <div class='register-input-label'>Location</div>
+      <label class="item item-input item-floating-label register-input-field white-bg">
+        <!-- <span class="input-label item-floating-label-text">Mobile No.</span> -->
+        <ion-google-place placeholder="Type Area, City" ng-model="details" prefill='{{preFillLocation}}' />
+      </label>
+
+
+    </div>
+    <div>
+    	<button class="button button-block button-balanced bg-dpt-green" ng-disabled="isSaveButtonDisabled">
+        <!-- Join -->
+		<i class='fa fa-user-plus'></i> Register
+		</button>
+    </div>
+    </form>
+    </div>
+    <!-- <br><br><br> -->
+  </ion-content>
+  <!-- <div class="bar bar-footer bar-balanced bg-dpt-green">
+  	<div class="title">Login</div>
+  </div> -->
+</ion-view>
+

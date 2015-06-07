@@ -1,0 +1,17 @@
+<ion-view title="InfoTap">
+  <ion-content class="nogrey-bg ion-content"> 
+  <div class="home-img-container">
+   <img class="home-img" src="img/infotap.png" />
+   <div class="home-img-comment">Goverment nofication in your finger tips</div>
+   <img class="home-img" src="img/chat-bubbles.png" />
+  </div>
+  </ion-content>
+  <div class="bar bar-footer bar-balanced bg-dpt-green" ng-click="Globals.isLoggedIn?Globals.goToState('base.feeds'):Globals.goToState('base.register1')">
+    <div ng-show='Globals.isLoggedIn'>
+	  <div class="title">Get Started <i class="fa fa-chevron-right"></i></div>
+    </div>
+    <div ng-hide='Globals.isLoggedIn'>
+    <div class="title">Login with Aadhaar <i class="fa fa-chevron-right"></i></div>
+    </div>
+  </div>
+</ion-view>
