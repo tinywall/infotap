@@ -4,11 +4,12 @@ InfoTap is a G2C communication channel, by which Government sectors can communic
 Citizens can register using their Aadhaar cards and authenticate themselves using a OTP.
 Registered citizens get personalized as well as public notifications such as:
 
-Area specific info for citizen’s locality
-On time awareness on public issues such as power cuts, transport etc.
-Personal bills and financial alerts
-Healthcare information such as free medical camps, polio drops etc
-Emergency alert such as natural disasters and safety tips
+<ul><li>Area specific info for citizen’s locality</li>
+<li>On time awareness on public issues such as power cuts, transport etc.</li>
+<li>Personal bills and financial alerts</li>
+<li>Healthcare information such as free medical camps, polio drops etc</li>
+<li>Emergency alert such as natural disasters and safety tips</li>
+</ul>
 
 Users can select their preferred departments such as Electricity, Police etc and receive only those particular updates.
 
